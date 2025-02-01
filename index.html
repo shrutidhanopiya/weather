@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+    <!-- <input  type="text" id="city">
+    <button id="btn"> search</button> -->
+    <div id="app" class="container mx-auto p-4">
+        <h1 class="text-3xl font-bold text-center mb-6">Weather Forecast</h1>
+        <div class="flex flex-col items-center space-y-4">
+          <!-- Search by City -->
+          <div class="w-full max-w-md">
+            <input type="text" id="cityInput" placeholder="Enter city name" class="w-full p-2 border rounded">
+            <button id="searchCity" class="w-full mt-2 p-2 bg-blue-500 text-white rounded">Search</button>
+          </div>
+          <!-- Search by Current Location -->
+          <button id="currentLocation" class="w-full max-w-md p-2 bg-green-500 text-white rounded">Get Current Location Weather</button>
+          <!-- Recently Searched Cities Dropdown -->
+          <div id="recentCitiesDropdown" class="w-full max-w-md hidden">
+            <select id="recentCities" class="w-full p-2 border rounded">
+              <option value="">Recently searched cities</option>
+            </select>
+          </div>
+          <!-- Weather Display -->
+          <div id="weatherDisplay" class="w-full max-w-md mt-6 p-4 bg-white rounded shadow">
+            <p class="text-center">Weather data will appear here.</p>
+          </div>
+          <!-- Extended Forecast -->
+          <div id="extendedForecast" class="w-full mt-6">
+            <h2 class="text-2xl font-bold text-center mb-4">5-Day Forecast</h2>
+            <div id="forecastCards" class="grid grid-cols-1 md:grid-cols-5 gap-4"></div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>
